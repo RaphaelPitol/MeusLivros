@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeusLivros.Domain.Entities
 {
-    internal class Entity : IEquatable<Entity>
+    public abstract class Entity : IEquatable<Entity>
     {
         public int Id { get; set; }
 
