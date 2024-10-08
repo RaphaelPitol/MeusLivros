@@ -16,5 +16,23 @@ namespace MeusLivros.Domain.Entities
 
         #endregion
 
+        #region Construtores
+
+        public Livro(string nome, DateTime lancamento, int editora)
+        {
+            Nome = nome;
+            Lancamento = lancamento;
+            EditoraId = editora;
+        }
+
+        public Livro(int id, string nome, DateTime lancamento, int editora)
+        {
+            Id = id;
+            Nome = nome;
+            Lancamento = lancamento;
+            EditoraId = editora;
+        }
+        #endregion
+
     }
 }

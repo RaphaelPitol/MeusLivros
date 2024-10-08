@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MeusLivros.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82c491b80fc4b039d2b00489e2a8742110441349")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9aeb183f8e69b7c04e917c332cdb606b98e6a0c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MeusLivros.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MeusLivros.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
