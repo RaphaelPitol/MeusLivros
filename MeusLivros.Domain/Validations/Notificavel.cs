@@ -15,7 +15,7 @@ namespace MeusLivros.Domain.Validations
             _notificacoes = new List<string>();
         }
 
-        public void AddNoticacao(string notificacoes)
+        public void AddNotificacao(string notificacoes)
         {
             _notificacoes.Add(notificacoes);
         }
@@ -24,8 +24,8 @@ namespace MeusLivros.Domain.Validations
         public IReadOnlyCollection<string> Notificacoes => _notificacoes;
 
 
-        public bool isInvalida => _notificacoes.Any();
+        public bool IsInvalida => _notificacoes.Any();
 
-        public bool isValida => !isInvalida;
+        public bool IsValida => !IsInvalida;
     }
 }

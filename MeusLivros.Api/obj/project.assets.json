@@ -88,6 +88,16 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "MeusLivros.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/MeusLivros.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MeusLivros.Domain.dll": {}
+        }
       }
     }
   },
@@ -420,10 +430,16 @@
         "swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "MeusLivros.Domain/1.0.0": {
+      "type": "project",
+      "path": "../MeusLivros.Domain/MeusLivros.Domain.csproj",
+      "msbuildProject": "../MeusLivros.Domain/MeusLivros.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "MeusLivros.Domain >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -454,7 +470,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Usuario\\source\\repos\\MeusLivros\\MeusLivros.Domain\\MeusLivros.Domain.csproj": {
+              "projectPath": "C:\\Users\\Usuario\\source\\repos\\MeusLivros\\MeusLivros.Domain\\MeusLivros.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -499,13 +519,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ocorreu um erro ao obter os dados de vulnerabilidade do pacote: Não é possível carregar o índice de serviço para a origem https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

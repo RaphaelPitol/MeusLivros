@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MeusLivros.Domain.Commands.Interfaces
 {
-    internal interface ICommandResult
+    public interface ICommandResult
     {
     }
 }
