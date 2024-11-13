@@ -13,7 +13,10 @@ using System.Threading.Tasks;
 namespace MeusLivros.Domain.Handlers
 {
 
-    public class EditoraHandler : IHandler<EditoraInserirCommand>
+    public class EditoraHandler : 
+        IHandler<EditoraExcluirCommand>,
+        IHandler<EditoraInserirCommand>, 
+        IHandler<EditoraAlterarCommand>
     {
         private readonly IEditoraRepository _editoraRepository;
 
@@ -26,7 +29,7 @@ namespace MeusLivros.Domain.Handlers
         {
             //Fail Fast Validation
             command.Validar();
-            if (command.IsValida)
+            if (!command.IsValida)
             {
                 return new ComandResult(false, "Dados incorretos", command.Notificacoes);
             }
@@ -38,6 +41,42 @@ namespace MeusLivros.Domain.Handlers
             //retorna sucesso na inclusão
 
             return new ComandResult(true, "Editora inserir", editora);
+        }
+
+        public ICommandResult Execute(EditoraAlterarCommand command)
+        { //Fail Fast Validation
+            command.Validar();
+            if (!command.IsValida)
+            {
+                return new ComandResult(false, "Dados incorretos", command.Notificacoes);
+            }
+            //cria a classe editora com os dados do command
+            var editora = _editoraRepository.BuscarPorId(command.Id);
+
+            editora.Nome = command.Nome;
+
+            //salva no banco de dados
+            _editoraRepository.Alterar(editora);
+            //retorna sucesso na inclusão
+
+            return new ComandResult(true, "Editora Alterada", editora);
+        }
+
+        public ICommandResult Execute(EditoraExcluirCommand command)
+        {
+            command.Validar();
+            if (!command.IsValida)
+            {
+                return new ComandResult(false, "Dados incorretos", command.Notificacoes);
+            }
+            //cria a classe editora com os dados do command
+            var editora = _editoraRepository.BuscarPorId(command.Id);
+
+            //salva no banco de dados
+            _editoraRepository.Excluir(editora);
+            //retorna sucesso na inclusão
+
+            return new ComandResult(true, "Editora Excluida", editora);
         }
     }
 }

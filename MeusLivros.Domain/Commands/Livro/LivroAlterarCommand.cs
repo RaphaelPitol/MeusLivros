@@ -10,17 +10,15 @@ namespace MeusLivros.Domain.Commands.Livro
 {
     public class LivroAlterarCommand : Notificavel, ICommand
     {
-        public LivroAlterarCommand(int id, string nome, int autorId, int editoraId)
+        public LivroAlterarCommand(int id, string nome, int editoraId)
         {
             Id = id;
             Nome = nome;
-            AutorId = autorId;
             EditoraId = editoraId;
         }
 
         public int Id { get; set; }
         public string Nome { get; set; }
-        public int AutorId { get; set; }
         public int EditoraId { get; set; }
 
         public void Validar()
@@ -33,10 +31,7 @@ namespace MeusLivros.Domain.Commands.Livro
             {
                 AddNotificacao("O Nome do Livro é obrigátorio!");
             }
-            if (AutorId == null)
-            {
-                AddNotificacao("Insira o Autor!");
-            }
+            
             if (EditoraId == null)
             {
                 AddNotificacao("Insira a Editora!");

@@ -1,11 +1,6 @@
 ﻿using MeusLivros.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MeusLivros.Infra.Mappings
 {
@@ -13,21 +8,28 @@ namespace MeusLivros.Infra.Mappings
     {
         public void Configure(EntityTypeBuilder<Editora> builder)
         {
-            //Especificando o nome da tabela
+            // Especificando o nome da tabela no banco de dados
             builder.ToTable("TbEditora");
-            //Especifica qual a chave primaria da tabela
+
+            // Especificando a chave primária
             builder.HasKey(x => x.Id);
 
-            //especifica que o campo é auto increment
+            // Configurando o campo 'Id' como chave primária auto-incrementada
             builder.Property(x => x.Id)
-                .ValueGeneratedOnAdd()
-                .UseIdentityColumn();
+                   .ValueGeneratedOnAdd()
+                   .UseIdentityColumn();
 
+            // Configuração para o campo 'Nome'
             builder.Property(x => x.Nome)
-                .HasColumnName("EdiNome") // Nome da coluna do banco de dados
-                .HasColumnType("VARCHAR") // Tipo de dados da coluna 
-                .HasMaxLength(100)        // Define o tamanho do campo
-                .IsRequired();            // Define o campo como obrigatorio(NOTNULL)
+                   .HasColumnName("EdiNome") // Nome da coluna no banco de dados
+                   .HasColumnType("VARCHAR(100)") // Tipo e tamanho de dados da coluna
+                   .IsRequired(); // Define que o campo é obrigatório
+
+            // Configuração para a relação com 'Livro' (caso precise garantir mapeamento de relacionamento)
+            builder.HasMany(x => x.Livros)
+                   .WithOne(x => x.Editora)
+                   .HasForeignKey(x => x.EditoraId)
+                   .OnDelete(DeleteBehavior.Restrict); // Define ação ao excluir uma 'Editora'
         }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\bin\Debug\net8.0\MeusLivros.Domain.deps.json
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\bin\Debug\net8.0\MeusLivros.Domain.dll
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\bin\Debug\net8.0\MeusLivros.Domain.pdb
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.sourcelink.json
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.dll
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\refint\MeusLivros.Domain.dll
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\MeusLivros.Domain.pdb
+C:\Users\Usuario\source\repos\MeusLivros\MeusLivros.Domain\obj\Debug\net8.0\ref\MeusLivros.Domain.dll

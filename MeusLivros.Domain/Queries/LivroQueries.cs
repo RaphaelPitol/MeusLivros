@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MeusLivros.Domain.Queries
 {
-    internal class LivroQueries
+    public class LivroQueries
     {
         public static Expression<Func<Livro, bool>> BuscarPorId(int id)
         {
